@@ -1,0 +1,34 @@
+
+import javax.swing.JOptionPane;
+
+public class myArea2 extends measurement {
+
+	//public myArea2() {
+
+	//}
+
+	public int userData(int askMeasure) {
+		return askMeasure;
+	}
+
+	public int userInput2() {
+		return askMeasure;
+	}
+
+	public int userInput1() {
+		return askMeasure;
+	}
+
+	public static void main(String[] args) {
+
+		JOptionPane.showMessageDialog(null, "We are going to Compute the area of a rectangle");
+		myArea2 userInput1 = new myArea2();
+		userInput1.userData();
+		myArea2 userInput2 = new myArea2();
+		userInput2.userData();
+		JOptionPane.showMessageDialog(null,
+				"The Area of the Rectangle is " + userInput1.userData(askMeasure) * userInput2.userData(askMeasure),
+				null, JOptionPane.INFORMATION_MESSAGE);
+	}
+
+}
