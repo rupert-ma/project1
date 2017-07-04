@@ -7,13 +7,17 @@ public class myArea {
 		int askWidth = 0;
 		int askHeight = 0;
 		JOptionPane.showMessageDialog(null, "We are going to Compute the area of a rectangle");
-		boolean valid = false;
-		while (!valid) {
+		//boolean valid = false;
+		boolean validW = false;
+		boolean validH = false;
+		while (!validW || !validH) {
+		//while (!valid) {
 
 			try {
 				askWidth = Integer.parseInt(JOptionPane.showInputDialog("Enter The Width"));
 				if (askWidth >= 0)
-					valid = true;
+					//valid = true;
+					validW = true;
 			} 
 			catch (NumberFormatException e) {
 				JOptionPane.showInputDialog("That's not a number. Please try again.");
@@ -22,7 +26,8 @@ public class myArea {
 			try {
 				askHeight = Integer.parseInt(JOptionPane.showInputDialog("Enter The Height"));
 				if (askHeight >= 0)
-					valid = true;
+					//valid = true;
+					validH = true;
 			} 
 			catch (NumberFormatException e) {
 				JOptionPane.showInputDialog("That's not a number. Please try again.");
