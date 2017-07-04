@@ -1,0 +1,13 @@
+import javax.swing.JOptionPane;
+
+public class measurement {
+	public static int askMeasure;
+
+	public int userData() {
+		askMeasure = Integer.parseInt(JOptionPane.showInputDialog("Enter the measurement"));
+		return askMeasure;
+		
+	}
+	
+	
+}
