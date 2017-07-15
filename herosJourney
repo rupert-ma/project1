@@ -1,0 +1,35 @@
+package theJourney;
+
+import javax.swing.JOptionPane;
+
+public class theJourney {
+	
+	public String heroName() {
+		//***Asks for user name input
+				String askName = JOptionPane.showInputDialog(null, "What is your Name Hero?");
+				return askName;
+			// *****add error handling and null handling******							
+					}
+	
+	public String heroClass() {
+		Object[] options = {"Warrior", "Mage", "Thief"};
+		String askClass = (String)JOptionPane.showInputDialog(null, "What is your Hero's Class?", null, 0, null, options, "Warrior");
+		System.out.println(askClass);
+				
+		return askClass;
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		JOptionPane.showMessageDialog(null, "Welcome To the Heroes Journey!");
+		theJourney newChar = new theJourney();
+		String userName = newChar.heroName();
+		JOptionPane.showMessageDialog(null, "Hello " + userName);
+		
+		String userClass = newChar.heroClass();
+		JOptionPane.showMessageDialog(null, "You chose " + userClass);
+		
+	}
+
+}
