@@ -95,7 +95,7 @@ public class theJourney {
 			else if (ambush == 1) {
 			      System.out.println("No button clicked");
 			      JOptionPane.showMessageDialog(null, userName + " tries to run but trips, falls and is briefly knocked out. ");
-			      JOptionPane.showMessageDialog(null, userName + " breaks free from the orcs and after killing them all heads to the orc stronghold to rid the world of this menace. ");
+			      JOptionPane.showMessageDialog(null, userName + " breaks free from the orcs and after killing them all, heads to the orc stronghold to rid the world of this menace. ");
 			      
 			    }
 	}
