@@ -4,6 +4,8 @@ import javax.swing.JOptionPane;
 
 public class theJourney {
 	
+	private String userName;
+
 	//private static String strangersQuest;
 
 	public String heroName() {
@@ -16,7 +18,7 @@ public class theJourney {
 	public String heroClass() {
 		//***Asks for Heroes Class
 		Object[] options = {"Warrior", "Mage", "Thief"};
-		String askClass = (String)JOptionPane.showInputDialog(null, "What is your Hero's Class?", null, 0, null, options, "Warrior");
+		String askClass = (String)JOptionPane.showInputDialog(null, "What is your Hero's Class? (This will effect gameplay)", null, 0, null, options, "Warrior");
 		//System.out.println(askClass);
 		return askClass;
 		//**Add Null/Cancel handling
@@ -232,8 +234,69 @@ public class theJourney {
 
 	
 			//arriving at orc stronghold is next overlap
-			JOptionPane.showMessageDialog(null, userName + " arrives at the orc stronghold ");
+			JOptionPane.showMessageDialog(null, userName + " arrives at the orc stronghold and need to get past the gate.");
+			if (userClass == "Warrior") {
+				JOptionPane.showMessageDialog(null, userName + " breaks down the gate.");
+				JOptionPane.showMessageDialog(null, "This alerts an orc army which must be defeated");
+				 int userDamage3 = userAttack();
+					JOptionPane.showMessageDialog(null, userName + " Attacks the orc army for " + userDamage3 + " damage");
+				      if (userDamage3 > 40) {
+				    	  JOptionPane.showMessageDialog(null, "You have defeated the orc army!");
+				    	  JOptionPane.showMessageDialog(null, userName + " proceeds to the stronghold's inner sanctum where a necromancer is waiting for you.");
+				    	  
+				      }
+				      else {
+				    	  JOptionPane.showMessageDialog(null, "You were defeated by the orc army! You will have to start your journey over." ); System.exit(0);
+				      }
+				      
+				    }
+				
+				
+			
+			if (userClass == "Mage") {
+				JOptionPane.showMessageDialog(null, userName + " teleports past the gate into the stronghold's inner sanctum where a necromancer is waiting for you.");
+				
+			}
+			
+			if (userClass == "Thief") {
+				JOptionPane.showMessageDialog(null, userName + " sneaks through tunnels into the stronghold's inner sanctum where a necromancer is waiting for you..");
+				
+			}
+			
+			int userDamage4 = userAttack();
+			JOptionPane.showMessageDialog(null, userName + " Attacks the Necromancer for " + userDamage4 + " damage");
+		      if (userDamage4 > 40) {
+		    	  JOptionPane.showMessageDialog(null, "You have defeated the Necromancer!");
+		    	  		    	  
+		      }
+		      else {
+		    	  JOptionPane.showMessageDialog(null, "You were defeated by the Necromancer! You will have to start your journey over." ); System.exit(0);
+		      }
+		     
+	    	  JOptionPane.showMessageDialog(null, "After the necromancers defeat he transforms into dragon and teleports you to another dimension");
+	    	  JOptionPane.showMessageDialog(null, "In this dimension you come accross two hooded people. they tell you:");
+	    	  JOptionPane.showMessageDialog(null, "We are Jedi! Do not bother us!");
+	    	  JOptionPane.showMessageDialog(null, "You explain you were brought here from another dimension by the evil necromancer, so the Jedi offer to help");
+	    	  JOptionPane.showMessageDialog(null, "You find the Necromancer and engage him in battle with the jedi's help.");
+	    	  int userDamage5 = userAttack();
+				JOptionPane.showMessageDialog(null, userName + " Attacks the Necromancer for " + userDamage5 + " damage");
+			      if (userDamage5 > 40) {
+			    	  JOptionPane.showMessageDialog(null, "You have defeated the Necromancer! When the necromancers evil power was released you were trasnported home.");
+			    	  		    	  
+			      }
+			      else {
+			    	  JOptionPane.showMessageDialog(null, "You were defeated by the Necromancer! You fall knowing the Jedi will stop the evil necromancer." ); System.exit(0);
+			      }
+		    	  JOptionPane.showMessageDialog(null, "The End.");
+		    	  JOptionPane.showMessageDialog(null, "Credits.....with fanfaire and music.");
+		    	  JOptionPane.showMessageDialog(null, "Credits.....Progammer Dad aka Michael, story writer me aka Timothy Rupert, main charecter aka " + userName + ".");
+
+		      
+		      
+		    }
+			
+			
 					
 	}
 
-}
+
