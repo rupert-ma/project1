@@ -23,7 +23,7 @@ public class theJourney {
 		return askClass;
 		//**Add Null/Cancel handling
 		}
-	
+	// for test commit
 	public String heroGender() {
 		//***Asks for Heroes Gender
 		Object[] options = {"Male", "Female"};
