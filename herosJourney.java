@@ -151,7 +151,7 @@ public class theJourney {
 			      JOptionPane.showMessageDialog(null,"The King rides in and sees what has happened and offers " + userName + " a chance at redemption for the cowardice shown by killing a troll in a cave.");
 			      
 			    }
-		
+		//
 			int kingsQuest = newChar.kingsOffer();
 			//Quest offered to kill troll
 			if (kingsQuest == 0) {
